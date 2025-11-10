@@ -1,0 +1,53 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# ---- Virtual Environments ----
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# ---- Jupyter / Notebooks ----
+.ipynb_checkpoints/
+*.ipynb_convert
+
+# ---- Data Files ----
+data/raw/*
+!data/raw/.gitkeep
+data/cleaned/*
+!data/cleaned/.gitkeep
+
+# ---- OS Specific ----
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ---- IDE / Editor ----
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ---- Logs / Cache ----
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+.cache/
+__pycache__/
+*.egg-info/
+
+# ---- Environment / Config ----
+.env
+*.sqlite3
+*.db
