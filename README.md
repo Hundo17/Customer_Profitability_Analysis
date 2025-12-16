@@ -1,147 +1,103 @@
-# Customer Profitability Analysis  
-End-to-End Analytics Project Using Python, SQL, Power BI, and Excel
+# Customer Profitability Analysis
+End-to-End Analytics Business Case (Python, SQL, Power BI, Excel)
 
-## 1. Overview
-This project delivers a full customer profitability analysis using a multi-tool analytics workflow. The objective is to identify valuable customer segments, understand the behavioral and demographic factors driving profitability, and create executive-ready dashboards to support strategic decision-making.
+## Business Context
 
-The work spans four tools—Python, SQL, Power BI, and Excel—to demonstrate a complete analytics lifecycle: data ingestion, cleaning, modeling, querying, visualization, and business interpretation.
+A mid-sized retail organization operates under a fixed marketing and retention budget while facing rising customer acquisition costs and increased competition. Although the company collects extensive customer-level data, leadership lacks clarity on which customers drive long-term profitability, which behaviors influence value most, and how limited marketing resources should be allocated.
 
-## 2. Business Objective
-A retail organization needs to understand which customers deliver the highest value and why. Key questions include:
+This project simulates a real-world customer analytics engagement, delivering a data-driven framework to support customer prioritization, retention strategy, and marketing ROI optimization.
 
-- Which customers generate the highest lifetime value?  
-- What demographic and behavioral factors predict spending?  
-- How do customers cluster into meaningful, actionable segments?  
-- Which customer groups should be prioritized for marketing and retention efforts?  
-- How can insights be delivered clearly through dashboards and reporting?
+## Business Objective
 
-This project produces a data-driven segmentation and profitability framework to answer these questions.
+The objective is to maximize customer lifetime value and marketing efficiency by answering the following decision-focused questions:
 
-## 3. Project Workflow
+- Which customer segments contribute most to revenue and long-term value?
+- Which demographic and behavioral factors most strongly influence profitability?
+- Where should retention investment be prioritized versus reduced?
+- How can customer insights be delivered clearly to business stakeholders?
 
-### Data Cleaning & Preparation (Python)
-- Standardized categorical and date fields.  
-- Corrected outliers and missing values.  
-- Engineered new metrics including Total Spend, Total Purchases, Customer Value Score, and High-Value Flag.  
-- Exported cleaned datasets for SQL, Power BI, and Excel.
+## Analytical and Technical Execution
 
-### Exploratory Data Analysis (Python)
-- Distribution analysis for spending, demographics, and engagement.  
-- Correlation analysis to identify drivers of profitability.  
-- Visual exploration of spend patterns and customer behavior.
+To support executive-level decision-making, the analysis was implemented using a multi-tool analytics workflow aligned with real enterprise data environments.
 
-### Predictive Modeling (Python)
-- Linear regression to predict Total Spend.  
-- Statistical validation using R² and MAE.  
-- Interpretation of the strongest spend drivers (income, frequency, recency).
+### Data Preparation and Feature Engineering (Python)
 
-### Relational Modeling & Querying (SQL)
-- Created structured tables for customers and marketing activity.  
-- Wrote analytical SQL queries for segmentation, customer ranking, and behavioral summaries.  
-- Confirmed cluster results and regression trends using SQL outputs.
+- Cleaned and standardized demographic and behavioral data using pandas
+- Engineered core profitability metrics:
+  - Total Spend
+  - Purchase Frequency
+  - Customer Value Score (weighted composite)
+  - High-Value Customer Flag (top 20%)
+- Exported structured datasets for SQL querying, BI reporting, and Excel analysis
 
-### Dashboard Development (Power BI)
-- Connected directly to SQL tables.  
-- Built KPI cards, segmentation visuals, and cluster summaries.  
-- Provided interactive demographics and spend filters.
+### Exploratory and Predictive Analysis (Python)
 
-### Excel Dashboard & Modeling
-- Built KPI summary using Excel formulas and structured references.  
-- Created pivot tables and pivot charts for segmentation and spend analysis.  
-- Implemented a Customer Lookup Tool using lookup functions.  
-- Added regression insight summaries and final cluster profiles.  
-- Designed a polished, presentation-ready dashboard.
+- Performed distribution and correlation analysis to identify key drivers of customer value
+- Built a linear regression model to quantify the influence of income, purchase frequency, recency, and age
+- Evaluated model performance using R² and MAE (R² ≈ 0.75)
 
-## 4. Data Engineering & Feature Creation
-Key engineered fields include:
+### Relational Modeling and Validation (SQL)
 
-- **Total_Spend** – Summed spending across all product categories.  
-- **Total_Purchases** – Combined store, web, and catalog purchases.  
-- **Customer_Value_Score** – Weighted composite score based on spend, recency, and frequency.  
-- **High_Value_Flag** – Identifies top 20% of customers based on value score.  
-- **Cluster** – Four distinct customer segments via k-means clustering.
+- Designed normalized customer and activity tables
+- Wrote analytical SQL queries using joins, aggregations, and window functions
+- Validated modeling and segmentation insights directly from the database layer
 
-These features form the core of the profitability and segmentation analysis.
+### Executive Reporting and Delivery
 
-## 5. Predictive Modeling Summary
-Regression modeling revealed the following:
+- Power BI dashboards designed for executive KPI monitoring and customer segmentation analysis
+- Excel dashboard providing pivot-based summaries and a customer lookup tool for operational use
+- Outputs structured to support both strategic planning and day-to-day decision-making
 
-- Income is a significant and strong predictor of customer spending.  
-- Purchase frequency is the most reliable behavioral driver of customer value.  
-- Recency contributes moderately, with more recent customers showing higher value.  
-- Age has a mild positive impact but is not a major predictor.  
-- Model achieved **R² ≈ 0.75**, indicating strong explanatory power.
+## Customer Segmentation and Strategic Actions
 
-## 6. Customer Segmentation
-Unsupervised clustering produced four clear segments:
+Unsupervised clustering identified four distinct customer segments:
 
-- **Cluster 2 – High-Value Premium Customers**  
-  Highest spend, high engagement, strong income. Top priority for retention and premium offers.
+### Cluster 2 — High-Value Premium Customers
+Recommended Action: Prioritize retention, loyalty programs, and personalized offers  
+Rationale: Small segment with disproportionate revenue contribution  
+Risk of Inaction: High revenue exposure if churn increases
 
-- **Cluster 1 – Affluent Consistent Spenders**  
-  High income and frequent purchases. Good candidates for loyalty and cross-sell programs.
+### Cluster 1 — Affluent Consistent Spenders
+Recommended Action: Focus on cross-sell and upsell initiatives  
+Rationale: Strong income and purchase frequency with expansion potential  
+Opportunity: Increase average order value without additional acquisition cost
 
-- **Cluster 0 – Mid-Market Occasional Buyers**  
-  Moderate spend and engagement. Responsive to promotional strategies.
+### Cluster 0 — Mid-Market Occasional Buyers
+Recommended Action: Deploy targeted promotions during high-intent periods  
+Rationale: Responsive to incentives but price sensitive  
+Tradeoff: Diminishing ROI when over-targeted
 
-- **Cluster 3 – Budget-Constrained Low-Engagers**  
-  Lowest income and lowest spend. Minimal return on intensive marketing spend.
+### Cluster 3 — Budget-Constrained Low-Engagers
+Recommended Action: Minimize intensive marketing investment  
+Rationale: Low lifetime value and weak engagement  
+Impact: Cost savings can be reallocated to higher-ROI segments
 
-## 7. Dashboards
+## Business Impact and Tradeoffs
 
-### Power BI Dashboard  
-Includes:
-- Total Customers  
-- Average Spend  
-- Median Income  
-- Average Customer Age  
-- High-Value Customer Percentage  
-- Spend & Count by Segment  
-- Interactive filters  
-- Cluster persona summaries  
+- Reallocating marketing spend toward high-value customers improves ROI without increasing budget
+- Incremental retention gains among premium customers outperform broad promotional strategies
+- Strategic tradeoffs favor long-term profitability over short-term customer reach
 
-Designed for interactive exploration and business presentations.
+## Executive Dashboards and Tools
 
-### Excel Dashboard  
-Includes:
-- KPI summary  
-- Pivot-based segmentation visuals  
-- Customer Lookup Tool  
-- Regression insight text  
-- Cluster segment summary table  
-- Clean and structured dashboard layout  
+- Power BI Executive Overview Dashboard: https://github.com/Hundo17/Customer_Profitability_Analysis/blob/main/powerbi/Customer_Profitability_Analysis_SC1.png
 
-Designed to demonstrate Excel modeling and analytical reporting capabilities.
+- Power BI Customer Segmentation Dashboard: https://github.com/Hundo17/Customer_Profitability_Analysis/blob/main/powerbi/Customer_Profitability_Analysis_SC2.png
 
-## 8. Key Insights
-- High-income, high-engagement customers generate the majority of revenue.  
-- Engagement (purchase frequency) is the strongest driver of customer value.  
-- Clear segmentation reveals a premium customer group that should receive targeted retention strategies.  
-- Low-engagement customers show limited ROI for heavy marketing investment.  
-- High-value clusters offer the greatest opportunity for personalized marketing and loyalty programs.
+- Excel Executive Summary and Customer Lookup Tool: https://github.com/Hundo17/Customer_Profitability_Analysis/blob/main/excel/CustomerData.xlsx
 
-## 9. What This Project Demonstrates
-This project showcases capability in:
+## Technical Stack Summary
 
-- Working with large, unstructured datasets  
-- Python-based data cleaning, feature engineering, and predictive modeling  
-- SQL-based relational modeling and analytical queries  
-- Dashboard development in Power BI and Excel  
-- Statistical reasoning and segmentation methodology  
-- Communicating insights clearly to business stakeholders  
-- Delivering a full end-to-end analytics project from raw data to executive reporting  
+Python (pandas, scikit-learn)  
+SQL (Postgres via Supabase)  
+Power BI  
+Excel  
+Git and GitHub
 
-This reflects the skills required for data analyst, business analyst, marketing analyst, and customer insights roles.
+## What This Project Demonstrates
 
-## 10. Repository Structure
-```bash
-data/
-raw/
-cleaned/
-python/
-sql/
-powerbi/
-excel/
-docs/
-README.md
-```
+- End-to-end customer analytics execution
+- Business-driven segmentation and predictive modeling
+- SQL-based validation and relational reasoning
+- Executive-ready reporting and stakeholder communication
+- Translation of analytics into actionable business decisions
