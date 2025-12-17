@@ -80,11 +80,11 @@ Impact: Cost savings can be reallocated to higher-ROI segments
 
 ## Executive Dashboards and Tools
 
-- Power BI Executive Overview Dashboard: https://github.com/Hundo17/Customer_Profitability_Analysis/blob/main/powerbi/Customer_Profitability_Analysis_SC1.png
+- [Power BI Executive Overview Dashboard](https://github.com/Hundo17/Customer_Profitability_Analysis/blob/main/powerbi/Customer_Profitability_Analysis_SC1.png)
 
-- Power BI Customer Segmentation Dashboard: https://github.com/Hundo17/Customer_Profitability_Analysis/blob/main/powerbi/Customer_Profitability_Analysis_SC2.png
+- [Power BI Customer Segmentation Dashboard](https://github.com/Hundo17/Customer_Profitability_Analysis/blob/main/powerbi/Customer_Profitability_Analysis_SC2.png)
 
-- Excel Executive Summary and Customer Lookup Tool: https://github.com/Hundo17/Customer_Profitability_Analysis/blob/main/excel/CustomerData.xlsx
+- [Excel Executive Summary and Customer Lookup Tool](https://github.com/Hundo17/Customer_Profitability_Analysis/blob/main/excel/CustomerData.xlsx)
 
 ## Technical Stack Summary
 
